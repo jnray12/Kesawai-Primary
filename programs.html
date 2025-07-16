@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Programs - Kesawai Primary School</title>
+    <meta name="description" content="Explore our comprehensive academic programs for grades 1-8. Quality curriculum, extracurricular activities, and specialized learning opportunities.">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .programs-hero {
+            margin-top: 4rem;
+            background: linear-gradient(135deg, var(--school-green), var(--school-dark-green));
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .curriculum-section {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .grade-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .grade-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-200);
+            transition: transform 0.3s ease;
+        }
+        
+        .grade-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .grade-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .grade-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--school-green);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+        
+        .subjects-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .subjects-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .subjects-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .extracurricular-section {
+            padding: 4rem 0;
+            background: var(--gray-50);
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .activity-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .activity-icon {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto 1rem;
+            background: var(--school-yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--school-dark-green);
+        }
+        
+        .schedule-section {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .schedule-table th,
+        .schedule-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .schedule-table th {
+            background: var(--school-green);
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        .schedule-table tr:hover {
+            background: var(--gray-50);
+        }
+        
+        @media (max-width: 768px) {
+            .schedule-table {
+                font-size: 0.875rem;
+            }
+            
+            .schedule-table th,
+            .schedule-table td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <span class="logo-text">Kesawai Primary School</span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="programs.html" class="nav-link active">Programs</a>
+                <a href="faculty.html" class="nav-link">Faculty</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Programs Hero -->
+    <section class="programs-hero">
+        <div class="container">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">Academic Programs</h1>
+            <p style="font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">
+                Comprehensive education programs designed to nurture every aspect of your child's development.
+            </p>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="curriculum-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Curriculum</h2>
+                <p>Aligned with national standards and enhanced with innovative teaching methods</p>
+            </div>
+            
+            <div class="grade-levels">
+                <div class="grade-card">
+                    <div class="grade-header">
+                        <div class="grade-icon">1-2</div>
+                        <div>
+                            <h3 style="font-weight: 600; margin: 0; color: var(--gray-900);">Early Primary</h3>
+                            <p style="color: var(--gray-600); margin: 0; font-size: 0.875rem;">Grades 1-2</p>
+                        </div>
+                    </div>
+                    <p style="color: var(--gray-600); margin-bottom: 1rem;">Building foundational skills in literacy, numeracy, and social development.</p>
+                    <ul class="subjects-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Language Arts & Reading
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Basic Mathematics
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Science Exploration
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Creative Arts
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grade-card">
+                    <div class="grade-header">
+                        <div class="grade-icon">3-5</div>
+                        <div>
+                            <h3 style="font-weight: 600; margin: 0; color: var(--gray-900);">Middle Primary</h3>
+                            <p style="color: var(--gray-600); margin: 0; font-size: 0.875rem;">Grades 3-5</p>
+                        </div>
+                    </div>
+                    <p style="color: var(--gray-600); margin-bottom: 1rem;">Expanding knowledge and developing critical thinking skills across core subjects.</p>
+                    <ul class="subjects-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Advanced Language Arts
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Mathematics & Problem Solving
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Science & Technology
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Social Studies
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grade-card">
+                    <div class="grade-header">
+                        <div class="grade-icon">6-8</div>
+                        <div>
+                            <h3 style="font-weight: 600; margin: 0; color: var(--gray-900);">Upper Primary</h3>
+                            <p style="color: var(--gray-600); margin: 0; font-size: 0.875rem;">Grades 6-8</p>
+                        </div>
+                    </div>
+                    <p style="color: var(--gray-600); margin-bottom: 1rem;">Preparing students for secondary education with advanced coursework and specialization.</p>
+                    <ul class="subjects-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Literature & Composition
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Advanced Mathematics
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Physical & Life Sciences
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1rem; height: 1rem; color: var(--school-green);">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Foreign Language
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Activities -->
+    <section class="extracurricular-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Extracurricular Activities</h2>
+                <p>Diverse opportunities to explore interests and develop talents beyond the classroom</p>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 2rem; height: 2rem;">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="10,8 16,12 10,16 10,8"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-900);">Music & Arts</h3>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">Orchestra, choir, painting, and drama programs to nurture creative expression.</p>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 2rem; height: 2rem;">
+                            <circle cx="12" cy="12" r="3"/>
+                            <circle cx="12" cy="1" r="1"/>
+                            <circle cx="12" cy="23" r="1"/>
+                            <circle cx="4.22" cy="4.22" r="1"/>
+                            <circle cx="19.78" cy="19.78" r="1"/>
+                            <circle cx="1" cy="12" r="1"/>
+                            <circle cx="23" cy="12" r="1"/>
+                            <circle cx="4.22" cy="19.78" r="1"/>
+                            <circle cx="19.78" cy="4.22" r="1"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-900);">Sports</h3>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">Soccer, basketball, athletics, and swimming to promote physical fitness and teamwork.</p>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 2rem; height: 2rem;">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-900);">Technology</h3>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">Computer programming, robotics, and digital literacy for 21st-century skills.</p>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 2rem; height: 2rem;">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-900);">Academic Clubs</h3>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">Debate society, science club, and reading groups for academic enrichment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Schedule -->
+    <section class="schedule-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daily Schedule</h2>
+                <p>A structured day that balances academic learning with physical activity and creativity</p>
+            </div>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:00 - 8:30 AM</td>
+                        <td>Morning Assembly & Announcements</td>
+                        <td>30 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>8:30 - 10:00 AM</td>
+                        <td>First Academic Block (Mathematics/Language Arts)</td>
+                        <td>90 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 10:15 AM</td>
+                        <td>Morning Break</td>
+                        <td>15 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 11:45 AM</td>
+                        <td>Second Academic Block (Science/Social Studies)</td>
+                        <td>90 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>11:45 AM - 12:45 PM</td>
+                        <td>Lunch Break</td>
+                        <td>60 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>12:45 - 2:15 PM</td>
+                        <td>Third Academic Block (Specialized Subjects)</td>
+                        <td>90 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>2:15 - 3:00 PM</td>
+                        <td>Physical Education/Arts</td>
+                        <td>45 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>3:00 - 4:00 PM</td>
+                        <td>Extracurricular Activities/Study Hall</td>
+                        <td>60 minutes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <span>Kesawai Primary</span>
+                    </div>
+                    <p>Excellence in education for grades 1-8. Nurturing young minds for a brighter tomorrow.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Academic Programs</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>For Parents</h3>
+                    <ul>
+                        <li><a href="contact.html">Registration</a></li>
+                        <li><a href="programs.html">Academic Calendar</a></li>
+                        <li><a href="news.html">School Events</a></li>
+                        <li><a href="contact.html">Parent Resources</a></li>
+                        <li><a href="faculty.html">Meet Teachers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>123 Education Street, Kesawai District, KES 12345</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>info@kesawaiprimary.edu</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <span>Mon-Fri: 8:00 AM - 4:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kesawai Primary School. All rights reserved. | 
+                   <a href="#">Privacy Policy</a> | 
+                   <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

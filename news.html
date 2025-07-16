@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Announcements - Kesawai Primary School</title>
+    <meta name="description" content="Stay updated with the latest news, events, and announcements from Kesawai Primary School. Important information for students, parents, and staff.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <span>Kesawai Primary</span>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="news.html" class="nav-link active">News</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- News Hero Section -->
+    <section class="hero news-hero">
+        <div class="hero-content">
+            <h1>News & Announcements</h1>
+            <p>Stay informed about important updates, upcoming events, and exciting achievements at Kesawai Primary School</p>
+        </div>
+    </section>
+
+    <!-- News Content -->
+    <main class="main-content">
+        <!-- News Categories -->
+        <section class="section">
+            <div class="container">
+                <div class="news-categories">
+                    <button class="category-btn active" data-category="all">All News</button>
+                    <button class="category-btn" data-category="announcements">Announcements</button>
+                    <button class="category-btn" data-category="events">Events</button>
+                    <button class="category-btn" data-category="achievements">Achievements</button>
+                    <button class="category-btn" data-category="academics">Academics</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured News -->
+        <section class="section">
+            <div class="container">
+                <div class="featured-news">
+                    <div class="news-card featured" data-category="announcements">
+                        <div class="news-image">
+                            <div class="placeholder-image">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge">Important Announcement</span>
+                            <h2>School Registration Open for 2025-2026 Academic Year</h2>
+                            <p class="news-meta">December 15, 2024 | Administration</p>
+                            <p>We are excited to announce that registration for the 2025-2026 academic year is now open! Early bird registration is available until January 31st with special discounts for returning families.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent News Grid -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Recent News</h2>
+                <div class="news-grid">
+                    <article class="news-card" data-category="achievements">
+                        <div class="news-image">
+                            <div class="placeholder-image">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge achievement">Achievement</span>
+                            <h3>Kesawai Students Win Regional Math Competition</h3>
+                            <p class="news-meta">December 10, 2024</p>
+                            <p>Our Grade 6 math team took first place in the Regional Mathematics Competition, demonstrating exceptional problem-solving skills and teamwork.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="events">
+                        <div class="news-image">
+                            <div class="placeholder-image">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge event">Upcoming Event</span>
+                            <h3>Winter Concert & Art Exhibition</h3>
+                            <p class="news-meta">December 20, 2024 at 7:00 PM</p>
+                            <p>Join us for our annual Winter Concert featuring performances by all grade levels, followed by our student art exhibition in the main hall.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="academics">
+                        <div class="news-image">
+                            <div class="placeholder-image">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge academic">Academic</span>
+                            <h3>New STEM Lab Opens Next Semester</h3>
+                            <p class="news-meta">December 8, 2024</p>
+                            <p>We're thrilled to announce the opening of our new state-of-the-art STEM laboratory, featuring robotics, coding stations, and hands-on science equipment.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="events">
+                        <div class="news-image">
+                            <div class="placeholder-image">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge event">Event Recap</span>
+                            <h3>Thanksgiving Food Drive Success</h3>
+                            <p class="news-meta">December 5, 2024</p>
+                            <p>Thanks to our amazing school community, we collected over 500 food items for local families in need. Thank you to all students, parents, and staff who participated!</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="announcements">
+                        <div class="news-image">
+                            <div class="placeholder-image">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge announcement">Announcement</span>
+                            <h3>Holiday Schedule and Winter Break</h3>
+                            <p class="news-meta">December 1, 2024</p>
+                            <p>Please note our holiday schedule: December 23 - January 6 - Winter Break. Classes resume Monday, January 7th. Have a wonderful holiday season!</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="achievements">
+                        <div class="news-image">
+                            <div class="placeholder-image">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 4l4 4-4 4m-4-4h8m-8 6l-4-4 4-4m4 4H4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge achievement">Achievement</span>
+                            <h3>Green School Certification Awarded</h3>
+                            <p class="news-meta">November 28, 2024</p>
+                            <p>Kesawai Primary has received the Green School Certification for our environmental initiatives, including solar panels, recycling programs, and garden-to-table projects.</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center" style="margin-top: 3rem;">
+                    <button class="btn btn-outline">Load More News</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="section newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter to receive the latest news and announcements directly in your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <p class="form-note">We respect your privacy and will never share your email address.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Dates -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Important Dates</h2>
+                <div class="dates-grid">
+                    <div class="date-item">
+                        <div class="date-box">
+                            <span class="month">DEC</span>
+                            <span class="day">20</span>
+                        </div>
+                        <div class="date-info">
+                            <h4>Winter Concert</h4>
+                            <p>7:00 PM - Main Auditorium</p>
+                        </div>
+                    </div>
+                    
+                    <div class="date-item">
+                        <div class="date-box">
+                            <span class="month">DEC</span>
+                            <span class="day">23</span>
+                        </div>
+                        <div class="date-info">
+                            <h4>Winter Break Begins</h4>
+                            <p>Last day of classes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="date-item">
+                        <div class="date-box">
+                            <span class="month">JAN</span>
+                            <span class="day">7</span>
+                        </div>
+                        <div class="date-info">
+                            <h4>Classes Resume</h4>
+                            <p>Welcome back students!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="date-item">
+                        <div class="date-box">
+                            <span class="month">JAN</span>
+                            <span class="day">31</span>
+                        </div>
+                        <div class="date-info">
+                            <h4>Registration Deadline</h4>
+                            <p>Early bird discount expires</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <span>Kesawai Primary</span>
+                    </div>
+                    <p>Excellence in education for grades 1-8. Nurturing young minds for a brighter tomorrow.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Education Street<br>Knowledge City, KC 12345</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@kesawaiprimary.edu</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>School Hours</h4>
+                    <p>Monday - Friday<br>8:00 AM - 3:30 PM</p>
+                    <p>Office Hours<br>7:30 AM - 4:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kesawai Primary School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
